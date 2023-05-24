@@ -4,8 +4,10 @@
 
 ;A_Clipboard := ""  ; Start off empty to allow ClipWait to detect when the text has arrived.
 
+#IfWinActive,ahk_exe Steam.exe 
 
 
+;====================================quote======
 ;[quote] ctrl+q
 ^q::
   Send ^c
@@ -17,7 +19,7 @@
   !b::
   Send ^c
   ClipWait
-  clipboard = [b]"%A_Clipboard%"[/b]
+  clipboard = [b]" %A_Clipboard% "[/b]
   Send ^v
   return
 
