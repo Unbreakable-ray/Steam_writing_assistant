@@ -1,0 +1,10 @@
+^x::
+	Clipbak := Clipboard 				; Back up the Clipboard
+
+	Send, {shift Down}^{Left}{shift Up} 	; Copy the last word into the clipboard.
+	;LastWord := Clipboard 				; Save the last word you typed
+	;Clipboard := Clipbak 					; Return the proper Clipboard value
+
+	; Do Whatever random stuff here like maybe the following
+	ToolTip, Do the processing here with the word `"%LastWord%`"
+return
