@@ -21,8 +21,8 @@ $^q::
   ClipWait 
   A_Clipboard := ("[quote] " . A_Clipboard . " [/quote]")
   ;MsgBox "Control-C copied the following contents to the clipboard:`n`n" A_Clipboard
-  ;Sleep(100)
-  ;Send "^v"
+  Sleep(100)
+  Send "^v"
   return
 } 
 
@@ -50,18 +50,28 @@ A_Clipboard := ""
 Send "^c"
   if !ClipWait(00.1)
     {  
-       ;;; if dos NOT have have text
+      ;;; if dos NOT have have text
 
 
       ;MsgBox "The attempt to copy text onto the clipboard failed."
       ;MsgBox "Control-C copied the following contents to the clipboard:`n`n" A_Clipboard
       Send("{shift Down}^{Left}{shift Up}") 
+      Sleep(100)
       Send "^c"
-      SendInput "[b]{Ctrl down}v{Ctrl up}[/b]" 
-		return 
-   } 
+      ;clean space
+      ;A_Clipboard := RegExMatch(A_Clipboard, "\s") ? RegExReplace(A_Clipboard, "\s") : SubStr(A_Clipboard, 2)
+      ;SendInput "[b]" . A_Clipboard . "[/b]"
+      clipwait 
+      A_Clipboard := StrReplace(A_Clipboard, "`r`n") ;remove new line *it works
+      ;MsgBox "Control-C copied the following contents to the clipboard:`n`n" A_Clipboard
+      SendInput "[b]" A_Clipboard "[/b]" 
+		   return 
+    } 
+
+;;; if dos slection have have text
+
 ;Errorlevel := !ClipWait()
-A_Clipboard := "[b]" . A_Clipboard . "[/b]"
+A_Clipboard := "[b]" A_Clipboard "[/b]"
 ;Sleep(100)
 Send "^v"
 return
