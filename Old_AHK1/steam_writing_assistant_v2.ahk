@@ -13,12 +13,21 @@
 
 
 ;===============================[quote]==========================
-^q::
+$^q::
 {
-Send("^c")
-Errorlevel := !ClipWait()
-A_Clipboard := "[quote] " . A_Clipboard . " [/quote]"
-}
+  A_Clipboard := "" 
+  Send "^c"
+  ;Errorlevel := !ClipWait()
+  ClipWait 
+  A_Clipboard := ("[quote] " . A_Clipboard . " [/quote]")
+  ;MsgBox "Control-C copied the following contents to the clipboard:`n`n" A_Clipboard
+  ;Sleep(100)
+  ;Send "^v"
+  return
+} 
+
+
+
 ;================================[bold]============================
 /*
 ;[b]""[/b] alt+b  
@@ -41,20 +50,19 @@ A_Clipboard := ""
 Send "^c"
   if !ClipWait(00.1)
     {  
+       ;;; if dos NOT have have text
+
+
       ;MsgBox "The attempt to copy text onto the clipboard failed."
-      /*
-      Send("{Left 2}")
-      Click(2)
-      Send("^c")
-      */
+      ;MsgBox "Control-C copied the following contents to the clipboard:`n`n" A_Clipboard
       Send("{shift Down}^{Left}{shift Up}") 
       Send "^c"
       SendInput "[b]{Ctrl down}v{Ctrl up}[/b]" 
 		return 
    } 
 ;Errorlevel := !ClipWait()
-A_Clipboard := "[b] " . A_Clipboard . " [/b]"
-Sleep(100)
+A_Clipboard := "[b]" . A_Clipboard . "[/b]"
+;Sleep(100)
 Send "^v"
 return
 }
