@@ -1,0 +1,39 @@
+ 
+
+ b::
+               {
+    A_Clipboard := "" 
+        Send "^c"
+        gg := ""  
+        gg := A_Clipboard
+
+                    if !ClipWait(0.1)
+                        {
+                            MsgBox "empty"
+                            return
+                        }
+                     if (gg = "]") 
+                    {
+                        MsgBox ("]")
+                        return
+                    } 
+                    
+                    else if (gg = "a") 
+                        {
+                            MsgBox ("a")
+                            return
+                        } 
+                    else 
+                        {
+                          MsgBox ("you select other stuff") 
+                          return
+                        }    
+
+                    
+                    
+                    
+                }
+
+
+           
+           

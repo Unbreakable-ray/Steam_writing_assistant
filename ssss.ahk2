@@ -1,0 +1,17 @@
+
+Cost1 := ""  
+
+if (Cost1 = "`"`"") ; Checks if Cost1 is literal quotes
+    
+
+Cost1 := "" ; Cost1 = Blank
+
+If (Cost1 = "") ; Checks if Cost1 is blank
+    MsgBox("2: (" Cost1 ")")
+
+If (!Cost1) ; Checks if Cost1 is blank OR zero
+    
+
+if !isNumber(Cost1)
+    
+return

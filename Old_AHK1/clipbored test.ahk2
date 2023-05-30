@@ -1,0 +1,59 @@
+;A_Clipboard := "a"
+
+;;;;;;;;;;;;
+/*
+b::
+{
+if (A_Clipboard = "a") 
+    {
+        MsgBox ("hi")
+    }
+else {
+    MsgBox ("ss")
+}
+}
+*/
+
+;;;;;;;;;;;;;;;
+/*
+b::
+{
+ClipWait
+gg := (A_Clipboard "  kk")
+MsgBox (gg)
+}
+*/
+
+
+;;;;;;;;;;;;;;
+
+#Requires AutoHotkey v2.0
+#SingleInstance Force
+
+;simple clipbored with "IF" statements 
+
+b::
+{
+    A_Clipboard := "" 
+    SendInput "^c"
+    ;Errorlevel := !ClipWait()
+    ;!ClipWait()
+    ClipWait()
+    gg := A_Clipboard
+        {
+                    if (gg = "a") 
+                    {
+                        MsgBox ("Hi!! you copyed `"a`" HAVE NICE REWWORD!!! ^^" )
+                    }
+                    else if (gg = "b") 
+                    {
+                        MsgBox ("Hi!!! you copyed b")
+                    } else {
+                                          
+                    MsgBox ("Baka!!! you didn't copy `"A`" or B")
+                }
+        }
+}
+
+
+;@xmaxrayx @unbreakable-ray

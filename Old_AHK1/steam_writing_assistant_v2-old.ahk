@@ -45,29 +45,96 @@ $^q::
 
 ;[b][/b] Ctrl+b  
 ^b::
+
+{
+  MsgBox "hi"
+  A_Clipboard := ""
+  Send "^C"
+  ClipWait
+  B_clip := A_Clipboard
+
+      If (B_clip ="]") 
+      {
+      MsgBox "hi ]"
+      Send '{Right 1}'
+      SendInput "[b][\b]"
+      return
+      }
+      if (B_clip "") 
+        {
+          MsgBox "hi empty"
+          Send '{Blind}+{Left}'
+          Send "^c"
+          ClipWait
+          SendInput ("[b]" A_Clipboard "[/b]")
+          return
+        } 
+
+        else {
+          SendInput ("[b]" B_clip "[/b]") 
+          return
+        }
+
+      
+
+}
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ;garbage code
+
 {
 A_Clipboard := ""  
 Send "^c"
   if !ClipWait(00.1)
-    {  
-      ;;; if dos NOT have have text
+    {
+           if (A_Clipboard = "]") {  
+          
+            ;MsgBox "Control-C copied the following contents to the clipboard:`n`n" A_Clipboard]
+            MsgBox "hi ]"
+            send ("{Right}")
+            Sleep(100)
+            Send ("[b][/b]")
+          } else  {  
+            ;MsgBox "hi"
+            ;MsgBox "Control-C copied the following contents to the clipboard:`n`n" A_Clipboard
+            ;;; if dos NOT have have text
 
 
-      ;MsgBox "The attempt to copy text onto the clipboard failed."
-      ;MsgBox "Control-C copied the following contents to the clipboard:`n`n" A_Clipboard
-      Send("{shift Down}^{Left}{shift Up}") 
-      Sleep(100)
-      Send "^c"
-      ;clean space
-      ;A_Clipboard := RegExMatch(A_Clipboard, "\s") ? RegExReplace(A_Clipboard, "\s") : SubStr(A_Clipboard, 2)
-      ;SendInput "[b]" . A_Clipboard . "[/b]"
-      clipwait 
-      A_Clipboard := StrReplace(A_Clipboard, "`r`n") ;remove new line *it works
-      ;MsgBox "Control-C copied the following contents to the clipboard:`n`n" A_Clipboard
-      SendInput "[b]" A_Clipboard "[/b]" 
-		   return 
-    } 
+            ;MsgBox "The attempt to copy text onto the clipboard failed."
+            ;MsgBox "Control-C copied the following contents to the clipboard:`n`n" A_Clipboard
+            Send("{shift Down}^{Left}{shift Up}") 
+            Sleep(100)
+            Send "^c"
+            ;clean space
+            ;A_Clipboard := RegExMatch(A_Clipboard, "\s") ? RegExReplace(A_Clipboard, "\s") : SubStr(A_Clipboard, 2)
+            ;SendInput "[b]" . A_Clipboard . "[/b]"
+            clipwait 
+            A_Clipboard := StrReplace(A_Clipboard, "`r`n") ;remove new line *it works
+            ;MsgBox "Control-C copied the following contents to the clipboard:`n`n" A_Clipboard
+            SendInput "[b]" A_Clipboard "[/b]" 
+             
+          }
+        }     
 
+
+
+        
 ;;; if dos slection have have text
 
 ;Errorlevel := !ClipWait()
@@ -76,11 +143,12 @@ A_Clipboard := "[b]" A_Clipboard "[/b]"
 Send "^v"
 return
 }
-
+*/
 
 ;[b]""[/b] Alt+b
 !b::
 {
+  
   A_Clipboard := "" 
   Send "^c"
   Errorlevel := !ClipWait()

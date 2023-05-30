@@ -1,0 +1,116 @@
+;@xmaxray @unbreakable-ray 
+
+#Requires AutoHotkey v2.0
+#SingleInstance Force
+;#IfWinActive,ahk_exe Steam.exe 
+
+
+;===============================[quote]==========================
+
+^q::
+{   
+    gg := ""
+    A_Clipboard := "" 
+    Send "^c"
+    Sleep(50)
+    ;Errorlevel := !ClipWait()
+    ;!ClipWait()
+    /*
+    if ClipWait(00.1) {
+        Send(gg)
+     }
+    */
+
+    gg := ("[quote]" A_Clipboard "[/quote]")
+    A_Clipboard := gg
+    Send "^v"
+    return
+}
+
+;================================[horizontal rule]============================
+
+;[hr][/hr] Ctrl+h  
+^h:: SendInput ("[hr][/hr]")
+^r:: SendInput ("[hr][/hr]")
+;================================[spoiler]======================================
+
+;[s][/s] Ctrl+s  
+^s::
+{
+    gg := ""
+    A_Clipboard := "" 
+    Send "^c"
+    Sleep(50)
+    gg := ("[spoiler]" A_Clipboard "[/spoiler]")
+    A_Clipboard := gg
+    Send "^v"
+    return
+} 
+;================================[Bulleted list]============================
+^3::
+{ 
+SendInput
+(
+"
+[list]
+[*]
+[/list]
+"
+)
+
+Send("{Up 2}")
+Send("{Right  3}")
+
+return
+} 
+
+;================================[order list]============================
+^4::
+{ 
+SendInput
+(
+"
+[olist]
+[*]
+[/olist]
+"
+)
+
+Send("{Up 2}")
+Send("{Right  3}")
+return
+} 
+
+;================================[one slot list]============================
+^1::
+{ 
+Sleep(50)
+Send("{Enter}")
+SendInput("[*]")
+return
+}
+;================================[code]============================
+;code -> Alt+c / Ctrl+e
+!c::
+^e::
+{
+SendInput
+(
+"
+[code]  
+
+[/code]
+"
+)
+send ("{Up 2}")
+}
+
+;================================[navitaction]============================
+
+^Space::
+^Down:: 
+{
+    Send "^{End}"
+}
+
+;================================[]============================
