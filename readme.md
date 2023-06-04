@@ -1,1 +1,1 @@
-![Image](st.drawio.png “icon”)
+![st.drawio](./assets/st.drawio.png)
