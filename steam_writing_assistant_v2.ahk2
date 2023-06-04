@@ -157,8 +157,7 @@ send ("{Up 2}")
             if ( aa=1)
                 {
                     Send "^{End}"
-                    global  aa :=1
-                    return
+                                        return
                 }
                     
             else if (aa=2)
