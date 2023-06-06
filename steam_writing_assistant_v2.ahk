@@ -14,12 +14,12 @@ aa := 1 ;For Smart navitcation
 
 ^q::
 {   
-    gg := ""
-    A_Clipboard := "" 
+    gg := "" 
     Send "^c"
-    Sleep(50)
+    ClipWait 
     gg := ("[quote]" A_Clipboard "[/quote]")
     A_Clipboard := gg
+    Sleep(50)
     Send "^v"
     return
 }
