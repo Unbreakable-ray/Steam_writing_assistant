@@ -14,17 +14,18 @@ aa := 1 ;For Smart navitcation
 
 ^q::
 {   
-gg := ""
+    gg := ""
+    A_Clipboard := ""
     Send "^c"
     if !ClipWait(0.2,0)
         {
-            MsgBox ("no copy")
+            MsgBox ("There is no text!")
             return
         }
     gg := ("[quote]" . A_Clipboard . "[/quote]")
-    ;A_Clipboard := gg
-    Sleep(200)
-    Send (gg)
+     A_Clipboard := gg
+     Send "^v"
+    
     
     return
 }
