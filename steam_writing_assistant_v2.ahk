@@ -14,13 +14,18 @@ aa := 1 ;For Smart navitcation
 
 ^q::
 {   
-    gg := "" 
+gg := ""
     Send "^c"
-    ClipWait 
-    gg := ("[quote]" A_Clipboard "[/quote]")
-    A_Clipboard := gg
-    Sleep(50)
-    Send "^v"
+    if !ClipWait(0.2,0)
+        {
+            MsgBox ("no copy")
+            return
+        }
+    gg := ("[quote]" . A_Clipboard . "[/quote]")
+    ;A_Clipboard := gg
+    Sleep(200)
+    Send (gg)
+    
     return
 }
 ;================================[bold]============================
@@ -151,9 +156,11 @@ send ("{Up 2}")
 
 ;================================[Smart navitcation]============================
 ;defult number is 1
-^Space:: 
-        {
-            global  
+^Space::
+ {
+            global aa
+
+            
             if ( aa=1)
                 {
                     Send "^{End}"
@@ -171,8 +178,8 @@ send ("{Up 2}")
                     {
                       
                     }
-                
-        }
+               return 
+ }
         
 
 
