@@ -17,17 +17,46 @@ aa := 1 ;For Smart navitcation
     gg := ""
     A_Clipboard := ""
     Send "^c"
-    if !ClipWait(0.2,0)
+    if !ClipWait(0.2,0) ;if there is no text
         {
-            MsgBox ("There is no text!")
-            return
+            SetTimer ChangeButtonNames, 50
+            Result := MsgBox("Add Quote [BB] code?", "Eror: No text found", 4)
+                if (Result = "Yes")
+                    {
+                        return
+                    }
+                
+                if (Result ="No")
+                
+                    {
+                    Send("[quote][/quote]")
+                    Send("{Left 8}")
+                    return
+                   
+                    }
+                else
+                    {
+                        return
+                    }
+                    
+                                    
+                    ChangeButtonNames() ;change bttens names
+                    {
+                        if !WinExist("Eror: No text found")
+                            return  ; Keep waiting.
+                        SetTimer , 0
+                        WinActivate
+                        ControlSetText "&No", "Button1"
+                        ControlSetText "&Yes", "Button2"
+                    }
+                    
         }
-    gg := ("[quote]" . A_Clipboard . "[/quote]")
+        
+    ;if text found
+     gg := ("[quote]" . A_Clipboard . "[/quote]")
      A_Clipboard := gg
      Send "^v"
-    
-    
-    return
+     return
 }
 ;================================[bold]============================
 ^b::
