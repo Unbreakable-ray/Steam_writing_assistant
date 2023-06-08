@@ -6,7 +6,9 @@
 
 ;===============================[start the engine]==========================
 aa := 1 ;For Smart navigation  
+gg := ""
 
+signature := FileRead(A_MyDocuments . "\sss.txt") ;sinugture
 
 ;===============================[Temp engine]==========================
 ;/*
@@ -37,8 +39,8 @@ note :=1 ;for note ;temp
 ;*/
 ;===============================[Debug]==========================
 ;remove and add to display or allow it(;)
-F1:: MsgBox "Navigation mode is     [ " . aa . " ].", ("Debug window = Navigation" ), "Iconi" ;cheak navigation mode
-
++F1:: MsgBox "Navigation mode is     [ " . aa . " ].", ("Debug window = Navigation" ), "Iconi" ;cheak navigation mode
++F2:: MsgBox "gg contains:    [" . gg . "] `n A-Clipboard contains:    [" . A_Clipboard . "]", ("Debug window = Navigation" ), "Iconi" ;cheak navigation mode
 
 
 
@@ -311,4 +313,17 @@ $[::
         return
     
     }
+;================================[signature]============================
+F1::
+{
+A_Clipboard := signature
+Send "^v"
+return
+}
+
+
+F5:: 
+{
+    global signature := FileRead(A_MyDocuments . "\sss.txt") ;update
+}
 ;================================[]============================
