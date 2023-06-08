@@ -6,9 +6,28 @@
 
 ;===============================[start the engine]==========================
 aa := 1 ;For Smart navigation  
-gg := ""
+gg := "" ;clipboread work
+fileSengture := "Not ready"
 
-signature := FileRead(A_MyDocuments . "\sss.txt") ;sinugture
+
+
+;for singture function
+if FileExist(A_MyDocuments . "\SWA.txt") ;load file singture
+    {
+    signature := FileRead(A_MyDocuments . "\SWA.txt") ;sinugture
+    ;MsgBox("file signature exit and loaded") ;for test
+    fileSengture := "File is loaded" ;debug
+    }
+else 
+    {
+        FileAppend "
+        (
+        )", A_MyDocuments "\SWA.txt"
+        fileSengture := "new file created"
+
+
+    }
+
 
 ;===============================[Temp engine]==========================
 ;/*
@@ -41,7 +60,7 @@ note :=1 ;for note ;temp
 ;remove and add to display or allow it(;)
 +F1:: MsgBox "Navigation mode is     [ " . aa . " ].", ("Debug window = Navigation" ), "Iconi" ;cheak navigation mode
 +F2:: MsgBox "gg contains:    [" . gg . "] `n A-Clipboard contains:    [" . A_Clipboard . "]", ("Debug window = Navigation" ), "Iconi" ;cheak navigation mode
-
++F3:: MsgBox "Signature status: [" . fileSengture . "]"
 
 
 
@@ -325,15 +344,47 @@ return
 
 F5:: 
 {
-    global signature := FileRead(A_MyDocuments . "\sss.txt") ;update
+    global signature := FileRead(A_MyDocuments . "\SWA.txt") ;update
 }
 
 +F5::
 {
+    
+   Run 'notepad.exe ' A_MyDocuments . "\SWA.txt"
+   WinWait("ahk_exe notepad.exe")
+   SetTimer cheakNotepadExit, 20
    
-    ;Run 'notepad.exe `"  . A_MyDocuments . "\sss.txt" '
-    Run A_MyDocuments . "\sss.txt"
-    ;Run "notepad" . A_MyDocuments . "\sss.txt""
+   
+   
+   cheakNotepadExit()
+    {
+        if WinExist("ahk_class Notepad") 
+            {
+                ;restart
+                return
+            }
+        
+                        
+        else
+            {
+            ;Sleep(200)
+            global signature := FileRead(A_MyDocuments . "\SWA.txt") ;update
+            SetTimer ,0
+            fileSengture := "internal-edited and loaded"
+            MsgBox "Info: New signature louded", ("Steam writing assistant"), "Iconi"
+            }
+            
+    }
+      
+        
+    }
 
-}
+
+
+    ;Run A_MyDocuments . "\SWA.txt"
+    ;WinWait("ahk_exe notepad.exe")
+
+
+
+
 ;================================[]============================
