@@ -5,13 +5,49 @@
 ;#IfWinActive,ahk_exe Steam.exe 
 
 ;===============================[start the engine]==========================
-aa := 1 ;For Smart navitcation
+aa := 1 ;For Smart navigation  
+
+
+;===============================[Temp engine]==========================
+;/*
+
+;notepad ++ for testing
+note :=1 ;for note ;temp
+#n::
+{
+    global note  
+
+    If (note=1)
+        {
+            Run "C:\Program Files (x86)\Notepad++\notepad++.exe"
+            WinMaximize "ahk_exe notepad++.exe"
+            note := 2
+            return
+        }
+    if (note = 2)
+        {
+            WinMinimize "ahk_exe notepad++.exe" 
+            note := 1
+            return
+        }
+        return
+
+    }
+
+;*/
+;===============================[Debug]==========================
+;remove and add to display or allow it(;)
+F1:: MsgBox "Navigation mode is     [ " . aa . " ].", ("Debug window = Navigation" ), "Iconi" ;cheak navigation mode
+
+
+
+
+
 
 
 
 
 ;===============================[quote]==========================
-
 ^q::
 {   
     gg := ""
@@ -19,69 +55,85 @@ aa := 1 ;For Smart navitcation
     Send "^c"
     if !ClipWait(0.2,0) ;if there is no text
         {
-            SetTimer ChangeButtonNames, 50
-            Result := MsgBox("Add Quote [BB] code?", "Eror: No text found", 4)
-                if (Result = "Yes")
+           
+            SetTimer ChangeButtonNames, 20 ;timer to change butten naem
+            Result := MsgBox("There is no slected text `n Add Quote [BB] code?", ("Error: No text found" ), "OC Iconi Default2")
+            
+            if (Result = "Ok")
                     {
+                        
+                        Send("[quote][/quote]")
+                        Send("{Left 8}")
                         return
+                        
                     }
                 
-                if (Result ="No")
+                if (Result ="Cancel")
                 
                     {
-                    Send("[quote][/quote]")
-                    Send("{Left 8}")
-                    return
-                   
-                    }
-                else
-                    {
+                        Sleep(10)
                         return
+                        
                     }
-                    
+                
+                               
                                     
                     ChangeButtonNames() ;change bttens names
                     {
-                        if !WinExist("Eror: No text found")
+                        if !WinExist("Error: No text found")
                             return  ; Keep waiting.
                         SetTimer , 0
                         WinActivate
-                        ControlSetText "&No", "Button1"
-                        ControlSetText "&Yes", "Button2"
+                        ControlSetText "&Yes", "Button1"
+                        ControlSetText "&No", "Button2"
                     }
+                    return
                     
         }
-        
+
     ;if text found
      gg := ("[quote]" . A_Clipboard . "[/quote]")
      A_Clipboard := gg
      Send "^v"
      return
 }
+
+
+
+
+;================================      ==============================
 ;================================[bold]============================
+;================================       ============================
+
+
+
+
 ^b::
                {
+                global aa
     A_Clipboard := "" 
     Send '{Blind}+{Left}'
     Send "^c"
-    if !ClipWait(0.1)
+    if !ClipWait(0.1) ;no text
                                 {
                                     send ("[b][/b]")
-                                    send ("{Left 5}")
-                                    global aa :=2
+                                    send ("{Left 4}")
+                                    global aa :=2 ;for Smart navigation
                                     return
                                 }
         gg := ""  
         gg := A_Clipboard
-
-                    
+        gg := StrReplace(A_Clipboard, A_Space, "") ;remove space
+        
+        
                                 if (gg = "]") 
                                 {
-                                  Send ("^ {End}")
+                                  Send ("{Delete}")
                                   Sleep(10)
-                                  Send ("[b] [/b]")
+                                  Send ("][b][/b]")
                                   Sleep(10)
-                                  Send ("{Left 5}")
+                                  Send ("{Left 4}")
+                                  global aa := 2 ;for Smart navigation
                                   return
                                 } 
                     
@@ -89,11 +141,13 @@ aa := 1 ;For Smart navitcation
                                 else 
                                     {
                                     Send ("[b]" gg "[/b]") 
+                                    global aa := 4 ;for Smart navigation
                                     return
+
                                     }    
 
                     
-                    
+                    return
                     
                 }
 
@@ -102,7 +156,11 @@ aa := 1 ;For Smart navitcation
 
 ;[hr][/hr] Ctrl+h  
 ^h:: 
-^r:: SendInput ("[hr][/hr]")
+^r::
+{ 
+    SendInput ("[hr][/hr]")
+    Send ("{Enter}")
+ }
 ;================================[spoiler]======================================
 
 ;[s][/s] Ctrl+s  
@@ -184,7 +242,7 @@ send ("{Up 2}")
     Send "^{End}"
 }
 
-;================================[Smart navitcation]============================
+;================================[Smart navigation]============================
 ;defult number is 1
 ^Space::
  {
@@ -194,23 +252,63 @@ send ("{Up 2}")
             if ( aa=1)
                 {
                     Send "^{End}"
-                                        return
+                    return
                 }
                     
             else if (aa=2)
                 {
-                    Send ("{Right 3}{Space}")
+                    Send ("{Right 4}")
+                    SendInput (" ")
                     global aa :=1
                     return
                 }
 
                 else if (aa=3)
                     {
-                      
+                        Send "{Right}{Space}"
+                        global aa :=1
+                        return
                     }
+                else if (aa=4)
+                    {
+                    Send "{Left 4}"
+                    SendInput " "
+                    global aa := 1
+                    return
+                   }
+
                return 
  }
         
 
 
+;================================[Smart dublcate]============================
+":: ;""
+{
+    Send ('""')
+    Send ("{Left}")
+    global aa := 3
+    return
+
+}
+
+$}:: ;{}
+${::
+{
+    Send ("{Raw}{}")
+    Send ("{Left}")
+    global aa := 3
+    return
+
+}
+
+$]::
+$[::
+    {
+        Send ("{Raw}[]")
+        Send ("{Left}")
+        global aa := 3
+        return
+    
+    }
 ;================================[]============================
