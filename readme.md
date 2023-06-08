@@ -11,6 +11,13 @@ a Solution to make writing in Steam forums more organized and fun.
 
 
 
+
+
+
+
+
+
+
 # Hotkeys:
 
 - `Ctrl + Q`  to do quotes. 
@@ -51,11 +58,11 @@ a Solution to make writing in Steam forums more organized and fun.
 
 
 
+<img src="./assets/info.drawio.png" style="zoom:50%;" />
 
 
 
 
- <img src="/info.drawio.png" alt="info.drawio" style="zoom: 25%;" />
 
 
 

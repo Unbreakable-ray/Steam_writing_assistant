@@ -126,6 +126,7 @@ note :=1 ;for note ;temp
         gg := ""  
         gg := A_Clipboard
         gg := StrReplace(A_Clipboard, A_Space, "") ;remove space
+        gg := StrReplace(A_Clipboard, "`r`n", "") ;remove new lines
         
         
                                 if (gg = "]") 
@@ -325,5 +326,14 @@ return
 F5:: 
 {
     global signature := FileRead(A_MyDocuments . "\sss.txt") ;update
+}
+
++F5::
+{
+   
+    ;Run 'notepad.exe `"  . A_MyDocuments . "\sss.txt" '
+    Run A_MyDocuments . "\sss.txt"
+    ;Run "notepad" . A_MyDocuments . "\sss.txt""
+
 }
 ;================================[]============================
