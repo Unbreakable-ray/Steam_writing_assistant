@@ -1,13 +1,31 @@
 # Steam writing assistant (SWA)
 
-<p align="left" width="100%">
-    <br>.
-    <img src="./assets/Untitled_Artwork-1686319289723-2.jpg" alt="Untitled_Artwork" style="zoom:25%;" /> 
-</p>
 
 
-<img align="left" width="200" src="./assets/Untitled_Artwork-1686319289723-2.jpg" alt="Untitled_Artwork"  />
-#a **Software** to make writing in Steam forums more organized and fun
+<img align="left" width="400" src="./assets/Untitled_Artwork-1686319289723-2.jpg" alt="Untitled_Artwork"  /># Steam writing assistant 
+a **Software** to make writing in Steam forums more organized and fun
+````mermaid
+ 
+  mindmap
+  root((Steam writing assistant))
+  	easy to use
+  	a
+  	a
+````
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 # Futures
