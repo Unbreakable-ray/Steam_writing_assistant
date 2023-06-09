@@ -7,6 +7,7 @@
 ;===============================[start the engine]==========================
 aa := 1 ;For Smart navigation  
 gg := "" ;clipboread work
+ff := ""
 fileSengture := "Not ready"
 
 
@@ -59,14 +60,24 @@ note :=1 ;for note ;temp
 ;===============================[Debug]==========================
 ;remove and add to display or allow it(;)
 +F1:: MsgBox "Navigation mode is     [ " . aa . " ].", ("Debug window = Navigation" ), "Iconi" ;cheak navigation mode
-+F2:: MsgBox "gg contains:    [" . gg . "] `n A-Clipboard contains:    [" . A_Clipboard . "]", ("Debug window = Navigation" ), "Iconi" ;cheak navigation mode
++F2:: MsgBox "gg contains:    [" . gg . "] `n `n A-Clipboard contains:    [" . A_Clipboard . "]", ("Debug window = Navigation" ), "Iconi" ;cheak navigation mode
 +F3:: MsgBox "Signature status: [" . fileSengture . "]"
 
 
+msgInfo_god := "Navigation mode is     [ " . aa . " ]. `n`n gg contains:    [" . gg . "] `n`n Clipboard contains (A_Clipboard):    [" . A_Clipboard . "] `n`n Signature status: [" . fileSengture . "] `n `n ff contains:    [" . ff . "] ."
+F4:: MsgBox ( msgInfo_god) , ("Debug window = God mode" )
 
 
+/*
+;;varable
+msgInfo_aa := "Navigation mode is     [ " . aa . " ]."
+msgInfo_gg :="gg contains:    [" . gg . "] ."
+msgInfo_Clipboard := "A-Clipboard contains:    [" . A_Clipboard . "]"
+msgInfo_fileSignature := "Signature status: [" . fileSengture . "]"
+msgInfo_ff := "ff contains:    [" . ff . "] ."
 
-
+F4:: MsgBox ("" . msgInfo_aa . "`n `n" . msgInfo_gg . "" )
+*/
 
 ;===============================[quote]==========================
 ^q::
@@ -74,55 +85,84 @@ note :=1 ;for note ;temp
     
     A_Clipboard := ""
     Send "^c"
-    if !ClipWait(0.2,0) ;if there is no text
-        {
-            
-            
-            SetTimer ChangeButtonNames, 20 ;timer to change butten naem
-            Result := MsgBox("There is no slected text `n Add Quote [BB] code?", ("Error: No text found" ), "YNC Iconi Default2")
-            
-            if (Result = "Yes")
-                    {
-                        
-                        Send("[quote][/quote]")
-                        Send("{Left 8}")
-                        return
-                        
-                    }
-             if (Result = "No")
-                {
-                    A_Clipboard := gg
-                    Send "^v"
-                    return
-                    
-                }       
-                
-                if (Result ="Cancel")
-                
-                    {
-                        Sleep(10)
-                        return
-                        
-                    }
-                
-                               
+    Send ("{Delete}") ; see if this good?
+                    if !ClipWait(0.2,0) ;if there is no text
+                        {
+                            
+                            
+                            if (gg="")
+
+                                { ;start (see if gg empty)
+                                
+                                    SetTimer ChangeButtonNames, 20 ;timer to change butten naem
+                                    Result := MsgBox("There is no slected text `n Add Quote [BB] code?", ("Error: No text found" ), "YNC Iconi Default3")
                                     
-                    ChangeButtonNames() ;change bttens names
-                    {
-                        if !WinExist("Error: No text found")
-                            return  ; Keep waiting.
-                        SetTimer , 0
-                        WinActivate
-                        ControlSetText "&Yes", "Button1"
-                        ControlSetText "&No", "Button2"
-                    }
-                    return
-                    
-        }
-    gg := ""
+                                    if (Result = "Yes")
+                                            {
+                                                
+                                                ;Send("[quote][/quote]") disabled: too slow
+                                                A_Clipboard := ("[quote][/quote]")
+                                                Send "^v"
+                                                Send("{Left 8}")
+                                                return
+                                                
+                                            }
+                                            if (Result = "No")
+                                                {
+                                                    
+                                                    global ff
+                                                    A_Clipboard := (ff)
+                                                    Send "^v"
+                                                    return
+                                                    
+                                                }
+                                        
+                                        
+                                        if (Result ="Cancel")
+                                        
+                                            {
+                                                Sleep(10)
+                                                return
+                                                
+                                            }
+                                        
+                                                    
+                                                            
+                                            ChangeButtonNames() ;change bttens names
+                                            {
+                                                if !WinExist("Error: No text found")
+                                                    return  ; Keep waiting.
+                                                SetTimer , 0
+                                                WinActivate
+                                                ControlSetText "&Yes", "Button1"
+                                                ControlSetText "&Last quoted", "Button2"
+                                            
+                                            }
+                                            return
+                                } ;end (see if gg empty)
+                            else ;if gg has stuff
+                                {
+                                    ;MsgBox "gg is full"
+                                    A_Clipboard := gg
+                                    Send ("^v")
+                                global ff := gg
+                                    gg := ""
+                                    return
+                                }    
+                            return
+
+
+
+
+
+                            
+                            
+                        }
+    ;gg := ""
     ;if text found
-    global gg := ("[quote]" . A_Clipboard . "[/quote]")
-     A_Clipboard := gg
+        global gg := ("[quote]" . A_Clipboard . "[/quote]")
+        global ff := gg
+        A_Clipboard := gg
      ;Send "^v"
      return
 }
@@ -396,16 +436,3 @@ F5::
 
 
 ;================================[]============================
-F3::
-{
-if (gg="")
-    {
-        MsgBox "gg empty"
-        return
-    }
-else 
-    {
-        MsgBox "gg not empty"
-        return
-    }    
-}
