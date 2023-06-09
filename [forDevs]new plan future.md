@@ -1,8 +1,7 @@
 # New Futures
 
 - [ ] Smarter quote.
-
-
+- [ ] translator
 
 
 
@@ -11,10 +10,10 @@
 # Changes
 
 - [ ] change debug window to all-in-**ONE** window.
-- [ ] 
+- [ ] change the "gg" variable to easy to better name
 
 
 
 # Bugs
 
-- [ ] nothing yet if you one make a ticket in the issue section.
+- [ ] change function Ctrl+Q to not paste it 

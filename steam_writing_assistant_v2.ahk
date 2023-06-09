@@ -71,16 +71,17 @@ note :=1 ;for note ;temp
 ;===============================[quote]==========================
 ^q::
 {   
-    gg := ""
+    
     A_Clipboard := ""
     Send "^c"
     if !ClipWait(0.2,0) ;if there is no text
         {
-           
-            SetTimer ChangeButtonNames, 20 ;timer to change butten naem
-            Result := MsgBox("There is no slected text `n Add Quote [BB] code?", ("Error: No text found" ), "OC Iconi Default2")
             
-            if (Result = "Ok")
+            
+            SetTimer ChangeButtonNames, 20 ;timer to change butten naem
+            Result := MsgBox("There is no slected text `n Add Quote [BB] code?", ("Error: No text found" ), "YNC Iconi Default2")
+            
+            if (Result = "Yes")
                     {
                         
                         Send("[quote][/quote]")
@@ -88,6 +89,13 @@ note :=1 ;for note ;temp
                         return
                         
                     }
+             if (Result = "No")
+                {
+                    A_Clipboard := gg
+                    Send "^v"
+                    return
+                    
+                }       
                 
                 if (Result ="Cancel")
                 
@@ -111,11 +119,11 @@ note :=1 ;for note ;temp
                     return
                     
         }
-
+    gg := ""
     ;if text found
-     gg := ("[quote]" . A_Clipboard . "[/quote]")
+    global gg := ("[quote]" . A_Clipboard . "[/quote]")
      A_Clipboard := gg
-     Send "^v"
+     ;Send "^v"
      return
 }
 
@@ -192,7 +200,7 @@ note :=1 ;for note ;temp
     A_Clipboard := "" 
     Send "^c"
     Sleep(50)
-    gg := ("[spoiler]" A_Clipboard "[/spoiler]")
+    global gg := ("[spoiler]" A_Clipboard "[/spoiler]")
     A_Clipboard := gg
     Send "^v"
     return
@@ -388,3 +396,16 @@ F5::
 
 
 ;================================[]============================
+F3::
+{
+if (gg="")
+    {
+        MsgBox "gg empty"
+        return
+    }
+else 
+    {
+        MsgBox "gg not empty"
+        return
+    }    
+}

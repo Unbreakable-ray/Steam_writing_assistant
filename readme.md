@@ -1,10 +1,18 @@
+# Steam writing assistant (SWA)
+
+a Software to make writing in Steam forums more organized and fun.
 
 
-# Steam writing assistant
 
-a Solution to make writing in Steam forums more organized and fun.
+# Futures
 
 
+
+- Auto Bold
+
+  ![notepad++_L9WxYWZbtz](./assets/notepad++_L9WxYWZbtz.gif)
+
+* 
 
 ![Untitled_Artwork](./assets/Untitled_Artwork.jpg)
 
@@ -42,7 +50,30 @@ a Solution to make writing in Steam forums more organized and fun.
 
 
 
+# For Devs
 
+#### New Futures
+
+- [ ] Smarter quote.
+
+
+
+
+
+
+
+#### Changes
+
+- [ ] change debug window to all-in-**ONE** window.
+- [ ] 
+
+
+
+#### Bugs
+
+- [ ] nothing yet if you one make a ticket in the issue section.
+
+------
 
 
 
@@ -59,6 +90,8 @@ a Solution to make writing in Steam forums more organized and fun.
 
 
 <img src="./assets/info.drawio.png" style="zoom:50%;" />
+
+
 
 
 
@@ -109,3 +142,10 @@ a Solution to make writing in Steam forums more organized and fun.
 
 
 
+
+
+
+
+# Art History
+
+![Untitled_Artwork](./assets/Untitled_Artwork-1686260924370-1.jpg)
