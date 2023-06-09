@@ -1,6 +1,10 @@
 # Steam writing assistant (SWA)
 
-a Software to make writing in Steam forums more organized and fun.
+a **Software** to make writing in Steam forums more organized and fun
+<p align="left" width="100%">
+    <br>.
+    <img src="./assets/Untitled_Artwork-1686319289723-2.jpg" alt="Untitled_Artwork" style="zoom:25%;" /> 
+</p>
 
 
 
@@ -8,17 +12,16 @@ a Software to make writing in Steam forums more organized and fun.
 
 
 
-- Auto Bold
+- Auto Bold, Quote
 
-  ![notepad++_L9WxYWZbtz](./assets/notepad++_L9WxYWZbtz.gif)
-
-* 
-
-![Untitled_Artwork](./assets/Untitled_Artwork.jpg)
-
+<p align="left" width="100%">
+    <br>.
+    <img src="./assets/notepad++_L9WxYWZbtz.gif" alt="notepad++_L9WxYWZbtz" />  
+</p>
 
 
 
+# How to use 
 
 
 
@@ -50,38 +53,15 @@ a Software to make writing in Steam forums more organized and fun.
 
 
 
-# For Devs
+# Debug menu
 
-#### New Futures
+For devs or Expert users
 
-- [ ] Smarter quote.
-
-
+`F4` God mode in the `Message box`
 
 
 
-
-
-#### Changes
-
-- [ ] change debug window to all-in-**ONE** window.
-- [ ] 
-
-
-
-#### Bugs
-
-- [ ] nothing yet if you one make a ticket in the issue section.
-
-------
-
-
-
-
-
-
-
-
+<img src="./assets/image-20230609163600738.png" alt="image-20230609163600738"  />
 
 
 
