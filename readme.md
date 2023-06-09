@@ -138,22 +138,13 @@ For devs or Expert users
 
 # HTML test
 
-```html
-	<section>
-		<div class="main-topic">
-			<div class="left-text">
-				<h3>Deadpool Fans Petition 'SNL' for Superhero to Host</h3>
-				<p>
-					Deadpool fans want its superhero to host Saturday Night Live — Deadpool, that is, not Ryan Reynolds. Fans of the Merc With a Mouth, who led the Marvel film to a history-making debut at the box office, have launched a Change.org petition calling for the antihero to host an upcoming episode of the NBC sketch comedy show. "We've all seen the trailers, the magazine covers, the viral videos, and the billboards by now, so what's left for Deadpool (Ryan Reynolds) to do?" creator Andrew Stege asks in the petition, which is directed to SNL, creator Lorne Michaels, parent.
-				</p>
-			</div>
-			<div class="right-picture">
-				<img src="http://cdn3.whatculture.com/wp-content/uploads/2015/10/f5S3dvUb.jpg">
-			</div>
-			<div class="clear"></div>
-		<div>
-	</se
-```
+<img align="left" width="200" src="https://www.rd.com/wp-content/uploads/2018/02/25_Hilarious-Photos-that-Will-Get-You-Through-the-Week_280228817_Doty911.jpg" />
+
+
+# Headline 
+
+Some textddd
+
 
 
 
