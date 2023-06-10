@@ -17,3 +17,5 @@
 # Bugs
 
 - [x] change function Ctrl+Q to not paste it 
+- [ ] Fix Bolds with a mouse selection.
+- [x] Fix signature to support UTF-16

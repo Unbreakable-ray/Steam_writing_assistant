@@ -2,7 +2,7 @@
 
 #Requires AutoHotkey v2.0
 #SingleInstance Force
-;#IfWinActive,ahk_exe Steam.exe 
+;#HotIf WinActive("ahk_exe Steam.exe")
 
 ;===============================[start the engine]==========================
 aa := 1 ;For Smart navigation  
@@ -95,7 +95,7 @@ F4:: MsgBox ("" . msgInfo_aa . "`n `n" . msgInfo_gg . "" )
                                 { ;start (see if gg empty)
                                 
                                     SetTimer ChangeButtonNames, 20 ;timer to change butten naem
-                                    Result := MsgBox("There is no slected text `n Add Quote [BB] code?", ("Error: No text found" ), "YNC Iconi Default3")
+                                    Result := MsgBox("There is no slected text `n Add Quote [BB] code?", ("Error: No text found" ), "YNC Iconi Default3 0x40000")
                                     
                                     if (Result = "Yes")
                                             {
@@ -421,7 +421,7 @@ F5::
             global signature := FileRead(A_MyDocuments . "\SWA.txt", "UTF-8") ;update
             SetTimer ,0
             fileSengture := "internal-edited and loaded"
-            MsgBox "Info: New signature louded", ("Steam writing assistant"), "Iconi"
+            MsgBox  "Info: New signature louded", ("Steam writing assistant"), "0x40000 Iconi"
             }
             
     }
