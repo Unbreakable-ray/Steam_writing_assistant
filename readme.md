@@ -4,14 +4,7 @@
 
 <img align="left" width="400" src="./assets/Untitled_Artwork-1686319289723-2.jpg" alt="Untitled_Artwork"  /># Steam writing assistant 
 a **Software** to make writing in Steam forums more organized and fun
-````mermaid
- 
-  mindmap
-  root((Steam writing assistant))
-  	easy to use
-  	a
-  	a
-````
+
 
 
 
@@ -30,8 +23,6 @@ a **Software** to make writing in Steam forums more organized and fun
 
 # Futures
 
-
-
 - Auto Bold, Quote
 
 <p align="left" width="100%">
@@ -39,6 +30,12 @@ a **Software** to make writing in Steam forums more organized and fun
     <img src="./assets/notepad++_L9WxYWZbtz.gif" alt="notepad++_L9WxYWZbtz" />  
 </p>
 
+
+* Customizable Signature
+
+  
+
+* Auto-Translate to English
 
 
 # 	How to use 
