@@ -13,17 +13,17 @@ fileSengture := "Not ready"
 
 
 ;for singture function
-if FileExist(A_MyDocuments . "\SWA.txt") ;load file singture
+if FileExist(A_MyDocuments . "\SWA.txt") ;is if file singture exit
     {
-    signature := FileRead(A_MyDocuments . "\SWA.txt") ;sinugture
+    signature := FileRead(A_MyDocuments . "\SWA.txt",  "UTF-8") ;sinugture
     ;MsgBox("file signature exit and loaded") ;for test
     fileSengture := "File is loaded" ;debug
     }
-else 
+else ;create new sengture file 
     {
         FileAppend "
         (
-        )", A_MyDocuments "\SWA.txt"
+        )", A_MyDocuments "\SWA.txt" , "UTF-8"
         fileSengture := "new file created"
 
 
@@ -384,15 +384,17 @@ $[::
 ;================================[signature]============================
 F1::
 {
-A_Clipboard := signature
+A_Clipboard :=  signature
 Send "^v"
+;MsgBox  StrGet((FileRead(A_MyDocuments . "\SWA.txt",  "UTF-16-RAW")), "UTF-16")
+;MsgBox  (FileRead(A_MyDocuments . "\SWA.txt",  "UTF-8"))
 return
 }
 
 
 F5:: 
 {
-    global signature := FileRead(A_MyDocuments . "\SWA.txt") ;update
+    global signature := FileRead(A_MyDocuments . "\SWA.txt" ,"UTF-8") ;update
 }
 
 +F5::
@@ -416,7 +418,7 @@ F5::
         else
             {
             ;Sleep(200)
-            global signature := FileRead(A_MyDocuments . "\SWA.txt") ;update
+            global signature := FileRead(A_MyDocuments . "\SWA.txt", "UTF-8") ;update
             SetTimer ,0
             fileSengture := "internal-edited and loaded"
             MsgBox "Info: New signature louded", ("Steam writing assistant"), "Iconi"

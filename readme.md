@@ -4,7 +4,7 @@
 
 <img  width="400" src="./assets/Untitled_Artwork-1686319289723-2.jpg" alt="Untitled_Artwork" style="zoom:25%;" />
 
-a **Software** that make writing in Steam forums more organized and fun
+a **Software** that makes writing in Steam forums more organized and fun
 
 # Futures
 
@@ -16,7 +16,11 @@ a **Software** that make writing in Steam forums more organized and fun
 </p>
 
 
-* Customizable Signature
+* Customizable **Signature**
+
+  
+
+  
 
   
 
