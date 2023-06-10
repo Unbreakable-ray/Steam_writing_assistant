@@ -2,12 +2,9 @@
 
 
 
-<img align="left" width="400" src="./assets/Untitled_Artwork-1686319289723-2.jpg" alt="Untitled_Artwork"  />
+<img  width="400" src="./assets/Untitled_Artwork-1686319289723-2.jpg" alt="Untitled_Artwork" style="zoom:25%;" />
 
-# Steam writing assistant 
-a **Software** to make writing in Steam forums more organized and fun
-
-
+a **Software** that make writing in Steam forums more organized and fun
 
 # Futures
 
