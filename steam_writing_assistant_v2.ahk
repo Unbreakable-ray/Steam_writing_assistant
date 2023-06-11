@@ -6,8 +6,8 @@
 
 ;===============================[start the engine]==========================
 aa := 1 ;For Smart navigation  
-gg := "" ;clipboread work
-ff := ""
+modClipbord_God := "" ;clipboread work
+modClipbord_Backup := ""
 fileSengture := "Not ready"
 
 
@@ -60,23 +60,23 @@ note :=1 ;for note ;temp
 ;===============================[Debug]==========================
 ;remove and add to display or allow it(;)
 +F1:: MsgBox "Navigation mode is     [ " . aa . " ].", ("Debug window = Navigation" ), "Iconi" ;cheak navigation mode
-+F2:: MsgBox "gg contains:    [" . gg . "] `n `n A-Clipboard contains:    [" . A_Clipboard . "]", ("Debug window = Navigation" ), "Iconi" ;cheak navigation mode
++F2:: MsgBox "modClipbord_God contains:    [" . modClipbord_God . "] `n `n A-Clipboard contains:    [" . A_Clipboard . "]", ("Debug window = Navigation" ), "Iconi" ;cheak navigation mode
 +F3:: MsgBox "Signature status: [" . fileSengture . "]"
 
 
-msgInfo_god := "Navigation mode is     [ " . aa . " ]. `n`n gg contains:    [" . gg . "] `n`n Clipboard contains (A_Clipboard):    [" . A_Clipboard . "] `n`n Signature status: [" . fileSengture . "] `n `n ff contains:    [" . ff . "] ."
+msgInfo_god := "Navigation mode is     [ " . aa . " ]. `n`n modClipbord_God contains:    [" . modClipbord_God . "] `n`n Clipboard contains (A_Clipboard):    [" . A_Clipboard . "] `n`n Signature status: [" . fileSengture . "] `n `n modClipbord_Backup contains:    [" . modClipbord_Backup . "] ."
 F4:: MsgBox ( msgInfo_god) , ("Debug window = God mode" )
 
 
 /*
 ;;varable
 msgInfo_aa := "Navigation mode is     [ " . aa . " ]."
-msgInfo_gg :="gg contains:    [" . gg . "] ."
+msgInfo_modClipbord_God :="modClipbord_God contains:    [" . modClipbord_God . "] ."
 msgInfo_Clipboard := "A-Clipboard contains:    [" . A_Clipboard . "]"
 msgInfo_fileSignature := "Signature status: [" . fileSengture . "]"
-msgInfo_ff := "ff contains:    [" . ff . "] ."
+msgInfo_modClipbord_Backup := "modClipbord_Backup contains:    [" . modClipbord_Backup . "] ."
 
-F4:: MsgBox ("" . msgInfo_aa . "`n `n" . msgInfo_gg . "" )
+F4:: MsgBox ("" . msgInfo_aa . "`n `n" . msgInfo_modClipbord_God . "" )
 */
 
 ;===============================[quote]==========================
@@ -90,9 +90,9 @@ F4:: MsgBox ("" . msgInfo_aa . "`n `n" . msgInfo_gg . "" )
                         {
                             
                             
-                            if (gg="")
+                            if (modClipbord_God="")
 
-                                { ;start (see if gg empty)
+                                { ;start (see if modClipbord_God empty)
                                 
                                     SetTimer ChangeButtonNames, 20 ;timer to change butten naem
                                     Result := MsgBox("There is no slected text `n Add Quote [BB] code?", ("Error: No text found" ), "YNC Iconi Default3 0x40000")
@@ -110,8 +110,8 @@ F4:: MsgBox ("" . msgInfo_aa . "`n `n" . msgInfo_gg . "" )
                                             if (Result = "No")
                                                 {
                                                     
-                                                    global ff
-                                                    A_Clipboard := (ff)
+                                                    global modClipbord_Backup
+                                                    A_Clipboard := (modClipbord_Backup)
                                                     Send "^v"
                                                     return
                                                     
@@ -139,14 +139,14 @@ F4:: MsgBox ("" . msgInfo_aa . "`n `n" . msgInfo_gg . "" )
                                             
                                             }
                                             return
-                                } ;end (see if gg empty)
-                            else ;if gg has stuff
+                                } ;end (see if modClipbord_God empty)
+                            else ;if modClipbord_God has stumodClipbord_Backup
                                 {
-                                    ;MsgBox "gg is full"
-                                    A_Clipboard := gg
+                                    ;MsgBox "modClipbord_God is full"
+                                    A_Clipboard := modClipbord_God
                                     Send ("^v")
-                                global ff := gg
-                                    gg := ""
+                                global modClipbord_Backup := modClipbord_God
+                                    modClipbord_God := ""
                                     return
                                 }    
                             return
@@ -158,11 +158,11 @@ F4:: MsgBox ("" . msgInfo_aa . "`n `n" . msgInfo_gg . "" )
                             
                             
                         }
-    ;gg := ""
+    ;modClipbord_God := ""
     ;if text found
-        global gg := ("[quote]" . A_Clipboard . "[/quote]")
-        global ff := gg
-        A_Clipboard := gg
+        global modClipbord_God := ("[quote]" . A_Clipboard . "[/quote]")
+        global modClipbord_Backup := modClipbord_God
+        A_Clipboard := modClipbord_God
      ;Send "^v"
      return
 }
@@ -179,8 +179,11 @@ F4:: MsgBox ("" . msgInfo_aa . "`n `n" . msgInfo_gg . "" )
 
 ^b::
                {
-                global aa
+    global aa
     A_Clipboard := "" 
+    Send "^c"  
+    if !ClipWait(0.1)
+        { ;bold by send keybored
     Send '{Blind}+{Left}'
     Send "^c"
     if !ClipWait(0.1) ;no text
@@ -190,17 +193,19 @@ F4:: MsgBox ("" . msgInfo_aa . "`n `n" . msgInfo_gg . "" )
                                     global aa :=2 ;for Smart navigation
                                     return
                                 }
-        gg := ""  
-        gg := A_Clipboard
-        gg := StrReplace(A_Clipboard, A_Space, "") ;remove space
-        gg := StrReplace(A_Clipboard, "`r`n", "") ;remove new lines
+        modClipbord_God := ""  
+        modClipbord_God := A_Clipboard
+        modClipbord_God := StrReplace(A_Clipboard, A_Space, "") ;remove space
+        modClipbord_God := StrReplace(A_Clipboard, "`r`n", "") ;remove new lines
         
         
-                                if (gg = "]") 
+                                if (modClipbord_God = "]") 
                                 {
                                   Send ("{Delete}")
                                   Sleep(10)
-                                  Send ("][b][/b]")
+                                  ;Send ("][b][/b]") too slow
+                                  A_Clipboard :=("][b][/b]")
+                                  Send  "^v"
                                   Sleep(10)
                                   Send ("{Left 4}")
                                   global aa := 2 ;for Smart navigation
@@ -210,7 +215,10 @@ F4:: MsgBox ("" . msgInfo_aa . "`n `n" . msgInfo_gg . "" )
                             
                                 else 
                                     {
-                                    Send ("[b]" gg "[/b]") 
+                                    
+                                    ;Send ("[b]" modClipbord_God "[/b]")  too slow
+                                    A_Clipboard := ("[b]" modClipbord_God "[/b]")
+                                    Send "^v"
                                     global aa := 4 ;for Smart navigation
                                     return
 
@@ -219,7 +227,22 @@ F4:: MsgBox ("" . msgInfo_aa . "`n `n" . msgInfo_gg . "" )
                     
                     return
                     
-                }
+                } ;end of bold by keybored
+                
+                
+                ;blod by [mouse]
+                global modClipbord_God := ""  
+                global modClipbord_God := A_Clipboard
+                global modClipbord_God := StrReplace(A_Clipboard, A_Space, "") ;remove space
+                global modClipbord_God := StrReplace(A_Clipboard, "`r`n", "") ;remove new lines   modClipbord_God:= A_Clipboard
+                global modClipbord_God :="[b]" . A_Clipboard . "[/b]"
+                A_Clipboard := modClipbord_God
+                Send "^v"
+                
+
+
+
+               }
 
 
 ;================================[horizontal rule]============================
@@ -236,12 +259,12 @@ F4:: MsgBox ("" . msgInfo_aa . "`n `n" . msgInfo_gg . "" )
 ;[s][/s] Ctrl+s  
 ^s::
 {
-    gg := ""
+    modClipbord_God := ""
     A_Clipboard := "" 
     Send "^c"
     Sleep(50)
-    global gg := ("[spoiler]" A_Clipboard "[/spoiler]")
-    A_Clipboard := gg
+    global modClipbord_God := ("[spoiler]" A_Clipboard "[/spoiler]")
+    A_Clipboard := modClipbord_God
     Send "^v"
     return
 } 

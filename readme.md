@@ -11,12 +11,19 @@ a **Software** that makes writing in Steam forums more organized and fun
 - Auto Bold, Quote
 
 <p align="left" width="100%">
-    <br>.
+    <br>
     <img src="./assets/notepad++_L9WxYWZbtz.gif" alt="notepad++_L9WxYWZbtz" />  
 </p>
 
 
+
+
+
 * Customizable **Signature**
+
+* 
+
+* 
 
   
 
@@ -31,13 +38,19 @@ a **Software** that makes writing in Steam forums more organized and fun
 
 
 
+# Hotkeys (new)
+
+- 
+
+
+
 
 
 
 
 # Hotkeys:
 
-- `Ctrl + Q`  to do quotes. 
+- `Ctrl + Q`  to do  . 
 - `Ctrl + B` converts to Bold fonts.
 - `Ctrl + I` converts to italic fonts.
 - `Shift + Ctrl + I` & `Shift + Ctrl + B`  Bold + italic 
@@ -63,7 +76,7 @@ a **Software** that makes writing in Steam forums more organized and fun
 
 For devs or Expert users
 
-`F4` God mode in the `Message box`
+- `God mode`:  press `F4`  to show God mode in the `Message box`
 
 
 
