@@ -21,13 +21,10 @@ a **Software** that makes writing in Steam forums more organized and fun
 
 * Customizable **Signature**
 
+- 
 * 
 
 * 
-
-  
-
-  
 
   
 
@@ -40,13 +37,15 @@ a **Software** that makes writing in Steam forums more organized and fun
 
 # Hotkeys (new)
 
-- 
-
-
-
-
-
-
+- #####  **Q**uote
+- ##### **B**old
+- ##### **I**talic
+- ##### **S**poilers
+- ### **H**orizontal line .
+- ##### **B**ulleted list
+- **O**rder List
+- **C**ode
+- **S**ignature
 
 # Hotkeys:
 
@@ -60,9 +59,7 @@ a **Software** that makes writing in Steam forums more organized and fun
 - `ctrl + 2` order list.
 - `ctrl + 1` one slot list
 - `Alt + c`   code
-- `Signature` F1  and  F5 to  refresh it 
-
-
+- `Signature` F1  and  F5 to  refresh it  ``
 
 
 
@@ -158,14 +155,3 @@ For devs or Expert users
 # HTML test
 
 <img align="left" width="200" src="https://www.rd.com/wp-content/uploads/2018/02/25_Hilarious-Photos-that-Will-Get-You-Through-the-Week_280228817_Doty911.jpg" />
-
-
-# Headline 
-
-Some textddd
-
-
-
-
-s
-
