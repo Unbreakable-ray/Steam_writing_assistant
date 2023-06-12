@@ -6,9 +6,18 @@
 
 a **Software** that makes writing in Steam forums more organized and fun
 
-# Futures
+# Futures:
 
-- Auto Bold, Quote
+- Auto Quote
+
+<p align="left" width="100%">
+    <br>
+    <img src="./assets/steam_quote.gif" alt="steam_quote" style="zoom: 100.%;" />.  
+</p>
+
+<br><br>
+
+- Auto Bold, Italic 
 
 <p align="left" width="100%">
     <br>
