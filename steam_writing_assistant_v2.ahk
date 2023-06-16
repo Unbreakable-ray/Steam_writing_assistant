@@ -3,7 +3,7 @@
 #Requires AutoHotkey v2.0
 #SingleInstance Force
 ;#HotIf WinActive("ahk_exe Steam.exe")
-
+#HotIf WinActive("ahk_exe steamwebhelper.exe")
 ;===============================[start the engine]==========================
 aa := 1 ;For Smart navigation  
 modClipbord_God := "" ;clipboread work
