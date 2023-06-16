@@ -461,4 +461,16 @@ F5::
 
 
 
+;================================[Auto lower case]============================
+
+
+f10::
+{
+    
+    Send "^c"
+    modClipbord_God := StrLower(A_Clipboard)
+    A_Clipboard := modClipbord_God
+    Send "^v"
+
+}
 ;================================[]============================
