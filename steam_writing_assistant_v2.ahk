@@ -3,7 +3,7 @@
 #Requires AutoHotkey v2.0
 #SingleInstance Force
 ;#HotIf WinActive("ahk_exe Steam.exe")
-#HotIf WinActive("ahk_exe steamwebhelper.exe")
+#HotIf WinActive("ahk_exe steamwebhelper.exe") || WinActive("ahk_exe notepad++.exe")
 ;===============================[start the engine]==========================
 aa := 1 ;For Smart navigation  
 modClipbord_God := "" ;clipboread work
@@ -101,7 +101,8 @@ F4:: MsgBox ("" . msgInfo_aa . "`n `n" . msgInfo_modClipbord_God . "" )
                                             {
                                                 
                                                 ;Send("[quote][/quote]") disabled: too slow
-                                                A_Clipboard := ("[quote][/quote]")
+                                                A_Clipboard := ("[quote] [/quote]")
+                                                Sleep(50)
                                                 Send "^v"
                                                 Send("{Left 8}")
                                                 return

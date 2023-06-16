@@ -12,7 +12,7 @@
 
 # Bugs 													
 
-- [ ] 
+- [ ] the new Steam update doesn't add [quote] [/quote] because it loses focus on the popup window and forgets about the Crouser placement.
 
 
 
