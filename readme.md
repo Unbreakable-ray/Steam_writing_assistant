@@ -14,7 +14,6 @@ a **Software** that makes writing in Steam forums more organized and fun
     <br>
     <img src="./assets/steam_quote.gif" alt="steam_quote" style="zoom: 100.%;" />.  
 </p>
-
 <br><br>
 
 - Auto Bold, Italic 
@@ -26,18 +25,15 @@ a **Software** that makes writing in Steam forums more organized and fun
 
 
 
-
-
 * Customizable **Signature**
-
-- 
-* 
-
-* 
 
   
 
-* Auto-Translate to English
+* Auto lower-case F10
+
+  
+
+* Auto-Translate to English (not yet)
 
 
 # 	How to use 
@@ -46,17 +42,29 @@ a **Software** that makes writing in Steam forums more organized and fun
 
 # Hotkeys (new)
 
-- #####  **Q**uote
-- ##### **B**old
-- ##### **I**talic
-- ##### **S**poilers
-- ### **H**orizontal line .
-- ##### **B**ulleted list
-- **O**rder List
-- **C**ode
-- **S**ignature
+- **Q**uote `Ctrl + Q` or `Alt + Q` for "Quote".
 
-# Hotkeys:
+- **B**old  `Ctrl + B` or `Alt + B` for "Bold".
+
+- **I**talic  `Ctrl + I` or `Alt + I` for "quote".
+
+- **S**poilers `Ctrl + S` or `Alt + S` for "quote".
+
+- **H**orizontal line. `Ctrl + H`.
+
+- **B**ulleted list (* * *) 
+
+- **O**rder List
+
+- One more slot list +**1** `Ctrl + 1`
+
+- **C**od**e** `ALT+ C`  or `Ctrl  + E`
+
+- **S**ignature `F1`
+
+  
+
+  # Hotkeys:
 
 - `Ctrl + Q`  to do  . 
 - `Ctrl + B` converts to Bold fonts.
