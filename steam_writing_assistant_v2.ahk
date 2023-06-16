@@ -3,9 +3,9 @@
 #Requires AutoHotkey v2.0
 #SingleInstance Force
 ;#HotIf WinActive("ahk_exe Steam.exe")
-#HotIf WinActive("ahk_exe steamwebhelper.exe") || WinActive("ahk_exe notepad++.exe")
+#HotIf WinActive("ahk_exe steamwebhelper.exe") || WinActive("ahk_exe notepad++.exe") ;|| WinActivate("Steam")
 ;===============================[start the engine]==========================
-aa := 1 ;For Smart navigation  
+smartNavigation := 1 ;For Smart navigation  
 modClipbord_God := "" ;clipboread work
 modClipbord_Backup := ""
 fileSengture := "Not ready"
@@ -59,24 +59,25 @@ note :=1 ;for note ;temp
 ;*/
 ;===============================[Debug]==========================
 ;remove and add to display or allow it(;)
-+F1:: MsgBox "Navigation mode is     [ " . aa . " ].", ("Debug window = Navigation" ), "Iconi" ;cheak navigation mode
++F1:: MsgBox "Navigation mode is     [ " . smartNavigation . " ].", ("Debug window = Navigation" ), "Iconi" ;cheak navigation mode
 +F2:: MsgBox "modClipbord_God contains:    [" . modClipbord_God . "] `n `n A-Clipboard contains:    [" . A_Clipboard . "]", ("Debug window = Navigation" ), "Iconi" ;cheak navigation mode
 +F3:: MsgBox "Signature status: [" . fileSengture . "]"
 
 
-msgInfo_god := "Navigation mode is     [ " . aa . " ]. `n`n modClipbord_God contains:    [" . modClipbord_God . "] `n`n Clipboard contains (A_Clipboard):    [" . A_Clipboard . "] `n`n Signature status: [" . fileSengture . "] `n `n modClipbord_Backup contains:    [" . modClipbord_Backup . "] ."
-F4:: MsgBox ( msgInfo_god) , ("Debug window = God mode" )
-
+msgInfo_god := "Navigation mode is     [ " . smartNavigation . " ]. `n`n modClipbord_God contains:    [" . modClipbord_God . "] `n`n Clipboard contains (A_Clipboard):    [" . A_Clipboard . "] `n`n Signature status: [" . fileSengture . "] `n `n modClipbord_Backup contains:    [" . modClipbord_Backup . "] ."
+MSGINFOTEST := "Navigation mode is     [ " . smartNavigation . " ]."
+;$F4:: MsgBox ( msgInfo_god) , ("Debug window = God mode" )
+$F4:: MsgBox "Navigation mode is     [ " . smartNavigation . " ]. `n`n modClipbord_God contains:    [" . modClipbord_God . "] `n`n Clipboard contains (A_Clipboard):    [" . A_Clipboard . "] `n`n Signature status: [" . fileSengture . "] `n `n modClipbord_Backup contains:    [" . modClipbord_Backup . "] ." , ("Debug window = God mode" )
 
 /*
 ;;varable
-msgInfo_aa := "Navigation mode is     [ " . aa . " ]."
+msgInfo_smartNavigation := "Navigation mode is     [ " . smartNavigation . " ]."
 msgInfo_modClipbord_God :="modClipbord_God contains:    [" . modClipbord_God . "] ."
 msgInfo_Clipboard := "A-Clipboard contains:    [" . A_Clipboard . "]"
 msgInfo_fileSignature := "Signature status: [" . fileSengture . "]"
 msgInfo_modClipbord_Backup := "modClipbord_Backup contains:    [" . modClipbord_Backup . "] ."
 
-F4:: MsgBox ("" . msgInfo_aa . "`n `n" . msgInfo_modClipbord_God . "" )
+F4:: MsgBox ("" . msgInfo_smartNavigation . "`n `n" . msgInfo_modClipbord_God . "" )
 */
 
 ;===============================[quote]==========================
@@ -180,7 +181,7 @@ F4:: MsgBox ("" . msgInfo_aa . "`n `n" . msgInfo_modClipbord_God . "" )
 
 ^b::
                {
-    global aa
+    global smartNavigation
     A_Clipboard := "" 
     Send "^c"  
     if !ClipWait(0.1)
@@ -191,7 +192,7 @@ F4:: MsgBox ("" . msgInfo_aa . "`n `n" . msgInfo_modClipbord_God . "" )
                                 {
                                     send ("[b][/b]")
                                     send ("{Left 4}")
-                                    global aa :=2 ;for Smart navigation
+                                    global smartNavigation :=2 ;for Smart navigation
                                     return
                                 }
         modClipbord_God := ""  
@@ -209,7 +210,7 @@ F4:: MsgBox ("" . msgInfo_aa . "`n `n" . msgInfo_modClipbord_God . "" )
                                   Send  "^v"
                                   Sleep(10)
                                   Send ("{Left 4}")
-                                  global aa := 2 ;for Smart navigation
+                                  global smartNavigation := 2 ;for Smart navigation
                                   return
                                 } 
                     
@@ -220,7 +221,7 @@ F4:: MsgBox ("" . msgInfo_aa . "`n `n" . msgInfo_modClipbord_God . "" )
                                     ;Send ("[b]" modClipbord_God "[/b]")  too slow
                                     A_Clipboard := ("[b]" modClipbord_God "[/b]")
                                     Send "^v"
-                                    global aa := 4 ;for Smart navigation
+                                    global smartNavigation := 4 ;for Smart navigation
                                     return
 
                                     }    
@@ -340,34 +341,34 @@ send ("{Up 2}")
 ;defult number is 1
 ^Space::
  {
-            global aa
+            global smartNavigation
 
             
-            if ( aa=1)
+            if ( smartNavigation=1)
                 {
                     Send "^{End}"
                     return
                 }
                     
-            else if (aa=2)
+            else if (smartNavigation=2)
                 {
                     Send ("{Right 4}")
                     SendInput (" ")
-                    global aa :=1
+                    global smartNavigation :=1
                     return
                 }
 
-                else if (aa=3)
+                else if (smartNavigation=3)
                     {
                         Send "{Right}{Space}"
-                        global aa :=1
+                        global smartNavigation :=1
                         return
                     }
-                else if (aa=4)
+                else if (smartNavigation=4)
                     {
                     Send "{Left 4}"
                     SendInput " "
-                    global aa := 1
+                    global smartNavigation := 1
                     return
                    }
 
@@ -381,7 +382,7 @@ send ("{Up 2}")
 {
     Send ('""')
     Send ("{Left}")
-    global aa := 3
+    global smartNavigation := 3
     return
 
 }
@@ -391,7 +392,7 @@ ${::
 {
     Send ("{Raw}{}")
     Send ("{Left}")
-    global aa := 3
+    global smartNavigation := 3
     return
 
 }
@@ -401,7 +402,7 @@ $[::
     {
         Send ("{Raw}[]")
         Send ("{Left}")
-        global aa := 3
+        global smartNavigation := 3
         return
     
     }
@@ -464,13 +465,19 @@ F5::
 ;================================[Auto lower case]============================
 
 
-f10::
+$f10::
 {
-    
-    Send "^c"
-    modClipbord_God := StrLower(A_Clipboard)
-    A_Clipboard := modClipbord_God
-    Send "^v"
-
+    A_Clipboard := ""
+    ;Send "^c" ;dosn't work with f10
+   Send("{ctrl Down}c{ctrl Up}")    
+    if !ClipWait(0.1)
+        {
+            Msgbox "no text"
+        }
+    modClipbord_God := (StrLower(A_Clipboard)) 
+    A_Clipboard := (modClipbord_God)
+    Send("{ctrl Down}v{ctrl Up}")   
+    modClipbord_Backup_for_devs := A_Clipboard
+    A_Clipboard := ""
 }
 ;================================[]============================
