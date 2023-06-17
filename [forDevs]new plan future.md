@@ -27,7 +27,7 @@
 - [x] change the "ff" variable to easy to better name. ("ff" to "modClipbord_Backup")
 - [ ] change for "aa" variable (--> )
 - [ ] add `modClipbord_Backup_for_devs` for debug menu
-- [ ] 
+- [ ] change ctrl+q from cut to copy
 
 # Planned New Futures											
 
