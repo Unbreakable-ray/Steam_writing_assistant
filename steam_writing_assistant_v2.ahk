@@ -2,8 +2,15 @@
 
 #Requires AutoHotkey v2.0
 #SingleInstance Force
-;#HotIf WinActive("ahk_exe Steam.exe")
-#HotIf WinActive("ahk_exe steamwebhelper.exe") || WinActive("ahk_exe notepad++.exe") ;|| WinActivate("Steam")
+
+#HotIf WinActive("steam") || WinActive("ahk_exe steamwebhelper.exe") || WinActive("ahk_exe notepad++.exe")
+SetTitleMatchMode 2
+;#HotIf WinActive("ahk_exe steamwebhelper.exe") || WinActive("ahk_exe notepad++.exe") ;or WinActivate("Steam")  ;30 min of waste my time after I found I wrote "Activate" instead of  "Active" engrish skill issue
+;=================================[incloude===========================
+
+
+
+
 ;===============================[start the engine]==========================
 smartNavigation := 1 ;For Smart navigation  
 modClipbord_God := "" ;clipboread work
@@ -88,7 +95,7 @@ F4:: MsgBox ("" . msgInfo_smartNavigation . "`n `n" . msgInfo_modClipbord_God . 
     
     A_Clipboard := ""
     Send "^c"
-    Send ("{Delete}") ; see if this good?
+    ;Send ("{Delete}") ; see if this good? no
                     if !ClipWait(0.2,0) ;if there is no text
                         {
                             
@@ -167,7 +174,7 @@ F4:: MsgBox ("" . msgInfo_smartNavigation . "`n `n" . msgInfo_modClipbord_God . 
         global modClipbord_God := ("[quote]" . A_Clipboard . "[/quote]")
         global modClipbord_Backup := modClipbord_God
         A_Clipboard := modClipbord_God
-     ;Send "^v"
+        Send "^v"
      return
 }
 
@@ -471,7 +478,7 @@ $f10::
 {
     A_Clipboard := ""
     ;Send "^c" ;dosn't work with f10
-   Send("{ctrl Down}c{ctrl Up}")    
+   SendInput("{ctrl Down}c{ctrl Up}")    
     if !ClipWait(0.1)
         {
             Msgbox "no text"
@@ -480,21 +487,23 @@ $f10::
     A_Clipboard := (modClipbord_God)
     Send("{ctrl Down}v{ctrl Up}")   
     modClipbord_Backup_for_devs := A_Clipboard
+    Sleep (50) ;TRY TO FIX
     A_Clipboard := ""
 }
 ;================================[Auto-translate]============================ temp
 
-
-
-
-
-
+;dir := A_MyDocuments . "\Steam-writing-assistant\Hotstring\tybo\Autocomb.txt"
+;Include "C:\Users\max\Documents\Steam-writing-assistant\Hotstring\tybo\Autocomb.ahk"
+;#Include "" . A_MyDocuments . "\Steam-writing-assistant\Hotstring\tybo\Autocomb.ahk"
+;#Include "%A_MyDocuments%\Steam-writing-assistant\Hotstring\tybo\Autocomb.ahk"
 
 
 ;================================[Auto tybe fix]============================
+/*
 ::im::I'm
 ::hes::he's
 ::Hes::He's
 ::shes::she's
 ::Shes::She's
 ::i::I
+*/

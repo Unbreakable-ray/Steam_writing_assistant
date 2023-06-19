@@ -18,7 +18,7 @@
 
   [^]: (bc integer =/= string ????)
 
-- [ ] 
+- [x] Fix F10 not working
 
 # Changes
 
