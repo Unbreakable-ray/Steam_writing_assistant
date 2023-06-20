@@ -12,13 +12,20 @@
 
 - [ ] disable remove space with mouse selection.
 
-- [ ] the new Steam update doesn't add [quote] [/quote] because it loses focus on the popup window and forgets about the test Crouser placement.
-
-- [ ] fix the `smartNavigation` number in f4 debug mode? 
-
-  [^]: (bc integer =/= string ????)
+- [ ] fix the `smartNavigation` number in f4 debug mode? (bc integer =/= string ????)
 
 - [x] Fix F10 not working
+
+  
+
+  
+
+# Bugs outside the control (need to rework)
+
+
+
+
+
 
 # Changes
 
@@ -42,6 +49,8 @@
 
 - [ ] random signature
 - [ ]  more  slot of signature
+- [ ]  auto-censor
+- [ ]  replace-censor
 
 ------
 
