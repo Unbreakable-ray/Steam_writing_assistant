@@ -495,7 +495,8 @@ $f10::
 ;dir := A_MyDocuments . "\Steam-writing-assistant\Hotstring\tybo\Autocomb.txt"
 ;Include "C:\Users\max\Documents\Steam-writing-assistant\Hotstring\tybo\Autocomb.ahk"
 ;#Include "" . A_MyDocuments . "\Steam-writing-assistant\Hotstring\tybo\Autocomb.ahk"
-;#Include "%A_MyDocuments%\Steam-writing-assistant\Hotstring\tybo\Autocomb.ahk"
+
+#Include "%A_MyDocuments%\Steam-writing-assistant\Hotstring\tybo\Autocomb.ahk"
 
 
 ;================================[Auto tybe fix]============================
