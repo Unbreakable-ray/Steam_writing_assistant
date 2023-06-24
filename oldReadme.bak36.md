@@ -23,7 +23,7 @@ ssssss
 * Auto-Translate to English (not yet)
 
 
-# 	How to use 
+# How to use 
 
 
 
@@ -198,7 +198,7 @@ For devs or Expert users
 - [ ] add `modClipbord_Backup_for_devs` for debug menu
 - [ ] change ctrl+q from cut to copy
 
-# Planned New Futures											
+# Planned New Futures.
 
 - [ ] add checkboxes for more options to print in `ini .file`
 
@@ -222,5 +222,16 @@ For devs or Expert users
 
 
 
-Auto-merged at 01:00:34 PM 2023/06/24	
+Auto-merged at 10:38:28 AM 2023/06/24	
 
+[# 	How to use ](## 	How to use )
+[# Hotkeys (new)](## Hotkeys (new))
+[# Debug menu](## Debug menu)
+[# Art History](## Art History)
+[# HTML test](## HTML test)
+[# For development section](## For development section)
+[# Bugs 													](## Bugs 													)
+[# Bugs outside the control (need to rework)](## Bugs outside the control (need to rework))
+[# Changes](## Changes)
+[# Planned New Futures											](## Planned New Futures											)
+[# Idea ](## Idea )

@@ -1,14 +1,28 @@
-ssssss
-![download](./sub-readme/readme-data/22.jpg).
 
-.
+# Steam writing assistant (SWA)
 
-.![1000 (2)](./sub-readme/readme-data/1000 (2).png)
 
-.
 
-.![download](./sub-readme/readme-data/download-1687324551111-4.jpg)
+<img  width="400" src="./assets/Untitled_Artwork-1686319289723-2.jpg" alt="Untitled_Artwork" style="zoom:25%;" />
 
+a **Software** that makes writing in Steam forums more organized and fun
+
+# Futures:
+
+- Auto Quote
+
+<p align="left" width="100%">
+    <br>
+    <img src="./assets/steam_quote.gif" alt="steam_quote" style="zoom: 100.%;" />.  
+</p>
+<br><br>
+
+- Auto Bold, Italic 
+
+<p align="left" width="100%">
+    <br>
+    <img src="./assets/notepad++_L9WxYWZbtz.gif" alt="notepad++_L9WxYWZbtz" />  
+</p>
 
 
 
@@ -218,9 +232,4 @@ For devs or Expert users
 
 @xmaxray 									@unbreakable-ray
 
-
-
-
-
-Auto-merged at 01:00:34 PM 2023/06/24	
-
+Edited at 08:11:53 23/06/19

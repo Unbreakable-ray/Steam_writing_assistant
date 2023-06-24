@@ -23,7 +23,7 @@ ssssss
 * Auto-Translate to English (not yet)
 
 
-# 	How to use 
+# How to use 
 
 
 
@@ -162,9 +162,9 @@ For devs or Expert users
 
 # For development section
 
-# Bugs 													
+# Bugs
 
-- [x] change function Ctrl+Q to not paste it.
+# change function Ctrl+Q to not paste it.
 
 - [x] Fix Bolds with a mouse selection.
 
@@ -222,5 +222,16 @@ For devs or Expert users
 
 
 
-Auto-merged at 01:00:34 PM 2023/06/24	
+Auto-merged at 10:23:30 AM 2023/06/24	
 
+[ 	How to use ](## 	How to use )
+[ Hotkeys (new)](## Hotkeys (new))
+[ Debug menu](## Debug menu)
+[ Art History](## Art History)
+[ HTML test](## HTML test)
+[ For development section](## For development section)
+[ Bugs 													](## Bugs 													)
+[ Bugs outside the control (need to rework)](## Bugs outside the control (need to rework))
+[ Changes](## Changes)
+[ Planned New Futures											](## Planned New Futures											)
+[ Idea ](## Idea )

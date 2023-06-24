@@ -1,13 +1,12 @@
-ssssss
-![download](./sub-readme/readme-data/22.jpg).
+![download](./readme-data/22.jpg).
 
 .
 
-.![1000 (2)](./sub-readme/readme-data/1000 (2).png)
+.![1000 (2)](./readme-data/1000 (2).png)
 
 .
 
-.![download](./sub-readme/readme-data/download-1687324551111-4.jpg)
+.![download](./readme-data/download-1687324551111-4.jpg)
 
 
 
@@ -159,68 +158,3 @@ For devs or Expert users
 # HTML test
 
 <img align="left" width="200" src="https://www.rd.com/wp-content/uploads/2018/02/25_Hilarious-Photos-that-Will-Get-You-Through-the-Week_280228817_Doty911.jpg" />
-
-# For development section
-
-# Bugs 													
-
-- [x] change function Ctrl+Q to not paste it.
-
-- [x] Fix Bolds with a mouse selection.
-
-- [x] Fix the signature to support UTF-16
-
-- [ ] fix no space removed "StrReplace"
-
-- [ ] disable remove space with mouse selection.
-
-- [ ] fix the `smartNavigation` number in f4 debug mode? (bc integer =/= string ????)
-
-- [x] Fix F10 not working
-
-  
-
-  
-
-# Bugs outside the control (need to rework)
-
-
-
-
-
-
-# Changes
-
-- [x] change debug window to all-in-**ONE** window.
-- [x] change the "gg" variable to easy to better name. ("gg" to "modClipbord_God")
-- [x] change the "ff" variable to easy to better name. ("ff" to "modClipbord_Backup")
-- [ ] change for "aa" variable (--> )
-- [ ] add `modClipbord_Backup_for_devs` for debug menu
-- [ ] change ctrl+q from cut to copy
-
-# Planned New Futures											
-
-- [ ] add checkboxes for more options to print in `ini .file`
-
-- [x] Smarter quote.
-- [ ] translator
-
-
-
-# Idea 
-
-- [ ] random signature
-- [ ]  more  slot of signature
-- [ ]  auto-censor
-- [ ]  replace-censor
-
-------
-
-@xmaxray 									@unbreakable-ray
-
-
-
-
-
-Auto-merged at 01:00:34 PM 2023/06/24	
-

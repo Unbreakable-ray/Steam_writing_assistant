@@ -1,5 +1,15 @@
-ssssss
-![download](./sub-readme/readme-data/22.jpg).
+ssssss<br><br><br><br><br><br><br>[ How to use ](## 	How to use )
+[ Hotkeys (new)](## Hotkeys (new))
+[ Debug menu](## Debug menu)
+[ Art History](## Art History)
+[ HTML test](## HTML test)
+[ For development section](## For development section)
+[ Bugs 													](## Bugs 													)
+[ Bugs outside the control (need to rework)](## Bugs outside the control (need to rework))
+[ Changes](## Changes)
+[ Planned New Futures											](## Planned New Futures											)
+[ Idea ](## Idea )
+![download](./readme-data/22.jpg).
 
 .
 
@@ -51,7 +61,7 @@ ssssss
 
   
 
-  # Hotkeys:
+  # /1/Hotkeys:
 
 - `Ctrl + Q`  to do  . 
 - `Ctrl + B` converts to Bold fonts.
@@ -222,5 +232,5 @@ For devs or Expert users
 
 
 
-Auto-merged at 01:00:34 PM 2023/06/24	
+Auto-merged at 09:57:09 AM 2023/06/24	
 
