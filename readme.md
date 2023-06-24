@@ -35,9 +35,6 @@ a **Software** that makes writing in Steam forums more organized and fun
 * Auto-Translate to English (not yet)
 
 
-# 	How to use 
-
-
 
 # Hotkeys (new)
 
@@ -51,37 +48,17 @@ a **Software** that makes writing in Steam forums more organized and fun
 
 - **H**orizontal line. `Ctrl + H`.
 
-- **B**ulleted list (* * *) 
+- Bulleted list (● ● ●)  `Ctrl+3`
 
-- **O**rder List
+- Order List (-1 -2 -3) `Ctrl+4`
 
 - One more slot list +**1** `Ctrl + 1`
 
 - **C**od**e** `ALT+ C`  or `Ctrl  + E`
 
-- **S**ignature `F1`
+- **S**ignature `F1` and `F5` to refresh new signature `Shift+F5` to change the signature.
 
   
-
-  # Hotkeys:
-
-- `Ctrl + Q`  to do  . 
-- `Ctrl + B` converts to Bold fonts.
-- `Ctrl + I` converts to italic fonts.
-- `Shift + Ctrl + I` & `Shift + Ctrl + B`  Bold + italic 
-- `ctrl +S`  spoilers.
-- `Ctrl + H`  insert a horizontal line.
-- `ctrl + 3` Bulleted list.
-- `ctrl + 2` order list.
-- `ctrl + 1` one slot list
-- `Alt + c`   code
-- `Signature` F1  and  F5 to  refresh it  ``
-
-
-
-
-
-
 
 
 
@@ -96,81 +73,31 @@ For devs or Expert users
 <img src="./sub-readme/readme-data/image-20230609163600738.png" alt="image-20230609163600738"  />
 
 
+# Change log:
 
+## v2.0.0 (Engine Upgrade):
 
+- #### New Engine: Based on `AHKv2`
 
+  completely re-written from ground to upgrade from `AHKv1` to `AHKv2`
 
-
-<img src="./sub-readme/readme-data/info.drawio.png" style="zoom:50%;" />
-
-
-
-
-
-
-
-
-
-
-
-
-
-  ````mermaid
-
-  mindmap
-  root((Steam writing assistant))
-  	Quote
-  		Ctrl+Q	
-  		Alt+Q
-  	Bold
-  		Ctrl+B
-  		Alt+b
-  	Italic
-  		Ctrl+I
-  		Alt+I
-  	Spoilers
-  		Ctrl+S
-  	Horizontal line
-  		Ctrrl+H
-  	Bulleted list
-  		Ctrl+3
-  			One more slot list
-  				Ctrl+1
-  	Order list
-  		Ctrl+4
-  			One more slot list
-  				Ctrl+1
-  	Code
-  		Alt+c
-  		Ctrl+e
-  	
-  	
   
-  ````
+
+- #### New Futures:
+
+  - Smart navigation v1.
+  - Smart Bold, Quote ,italic.
+  - Auto Double { } " " [ ]
+  - Signature.
+  - Auto-correct.
+  - Auto-rewrite game names.
+
+## v1.0.0 (First release):
+
+- based on `AHKv1`.
 
 
 
-
-
-
-
-
-
-
-
-# Art History
-
-![Untitled_Artwork](./sub-readme/readme-data/Untitled_Artwork-1686260924370-1.jpg)
-
-
-
-
-
-
-
-# HTML test
-
-<img align="left" width="200" src="https://www.rd.com/wp-content/uploads/2018/02/25_Hilarious-Photos-that-Will-Get-You-Through-the-Week_280228817_Doty911.jpg" />
 
 
 
@@ -235,6 +162,6 @@ For devs or Expert users
 @xmaxray 									@unbreakable-ray
 
 
-Auto-merged at 08:05:22 PM 2023/06/23	@xMaxrayx	@Unbreakable-ray
+Auto-merged at 06:29:11 PM 2023/06/24	@xMaxrayx	@Unbreakable-ray
 
 All-in-one Readme Lite : https://github.com/Unbreakable-ray/All-in-one-Readme_Lite
