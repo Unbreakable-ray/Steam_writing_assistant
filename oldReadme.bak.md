@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-0
-=======
 # Steam writing assistant (SWA)
 
 ![Untitled_Artwork-1686319289723-2](./sub-readme/readme-data/Untitled_Artwork-1686319289723-2.jpg)
@@ -244,4 +241,3 @@ Auto-merged by "All-in-one" app
 
 [All-in-one app]: https://github.com/Unbreakable-ray/All-in-one-Readme_Lite	"All-in-one app"
 
->>>>>>> ba7dfc8c73bb325c0c972b2e1074fa937d60eec8

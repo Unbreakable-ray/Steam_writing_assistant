@@ -59,6 +59,3 @@
 ------
 
 @xmaxray 									@unbreakable-ray
-
-
-

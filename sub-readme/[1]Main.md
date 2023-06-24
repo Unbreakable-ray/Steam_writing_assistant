@@ -35,7 +35,7 @@ a **Software** that makes writing in Steam forums more organized and fun
 * Auto-Translate to English (not yet)
 
 
-# 	How to use 
+# How to use 
 
 
 
@@ -61,9 +61,7 @@ a **Software** that makes writing in Steam forums more organized and fun
 
 - **S**ignature `F1`
 
-  
-
-  # Hotkeys:
+# Hotkeys:
 
 - `Ctrl + Q`  to do  . 
 - `Ctrl + B` converts to Bold fonts.
