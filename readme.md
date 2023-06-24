@@ -1,14 +1,38 @@
 ssssss
 ![download](./sub-readme/readme-data/22.jpg).
 
+<<<<<<< HEAD
 .
 
 .![1000 (2)](./sub-readme/readme-data/1000 (2).png)
 
 .
+=======
+![Untitled_Artwork-1686319289723-2](./sub-readme/readme-data/Untitled_Artwork-1686319289723-2.jpg)
+>>>>>>> ba7dfc8c73bb325c0c972b2e1074fa937d60eec8
 
 .![download](./sub-readme/readme-data/download-1687324551111-4.jpg)
 
+<<<<<<< HEAD
+=======
+# Futures:
+
+- Auto Quote
+
+<p align="left" width="100%">
+    <br>
+    <img src="./sub-readme/readme-data/steam_quote.gif" alt="steam_quote" style="zoom: 100.%;" />.  
+</p>
+
+<br><br>
+
+- Auto Bold, Italic 
+
+<p align="left" width="100%">
+    <br>
+    <img src="./sub-readme/readme-data/notepad++_L9WxYWZbtz.gif" alt="notepad++_L9WxYWZbtz" />  
+</p>
+>>>>>>> ba7dfc8c73bb325c0c972b2e1074fa937d60eec8
 
 
 
@@ -81,7 +105,7 @@ For devs or Expert users
 
 
 
-<img src="./assets/image-20230609163600738.png" alt="image-20230609163600738"  />
+<img src="./sub-readme/readme-data/image-20230609163600738.png" alt="image-20230609163600738"  />
 
 
 
@@ -89,7 +113,7 @@ For devs or Expert users
 
 
 
-<img src="./assets/info.drawio.png" style="zoom:50%;" />
+<img src="./sub-readme/readme-data/info.drawio.png" style="zoom:50%;" />
 
 
 
@@ -148,7 +172,7 @@ For devs or Expert users
 
 # Art History
 
-![Untitled_Artwork](./assets/Untitled_Artwork-1686260924370-1.jpg)
+![Untitled_Artwork](./sub-readme/readme-data/Untitled_Artwork-1686260924370-1.jpg)
 
 
 
@@ -160,6 +184,13 @@ For devs or Expert users
 
 <img align="left" width="200" src="https://www.rd.com/wp-content/uploads/2018/02/25_Hilarious-Photos-that-Will-Get-You-Through-the-Week_280228817_Doty911.jpg" />
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> ba7dfc8c73bb325c0c972b2e1074fa937d60eec8
 # For development section
 
 # Bugs 													
@@ -219,8 +250,14 @@ For devs or Expert users
 @xmaxray 									@unbreakable-ray
 
 
+<<<<<<< HEAD
 
 
 
 Auto-merged at 01:00:34 PM 2023/06/24	
 
+=======
+Auto-merged at 08:05:22 PM 2023/06/23	@xMaxrayx	@Unbreakable-ray
+
+All-in-one Readme Lite : https://github.com/Unbreakable-ray/All-in-one-Readme_Lite
+>>>>>>> ba7dfc8c73bb325c0c972b2e1074fa937d60eec8
