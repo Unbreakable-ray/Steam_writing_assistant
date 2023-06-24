@@ -235,6 +235,9 @@ For devs or Expert users
 @xmaxray 									@unbreakable-ray
 
 
-Auto-merged at 08:05:22 PM 2023/06/23	@xMaxrayx	@Unbreakable-ray
+Auto-merged at 08:03:36 PM 2023/06/23	@xMaxrayx	@Unbreakable-ray
 
-All-in-one Readme Lite : https://github.com/Unbreakable-ray/All-in-one-Readme_Lite
+Auto-merged by "All-in-one" app 
+
+[All-in-one app]: https://github.com/Unbreakable-ray/All-in-one-Readme_Lite	"All-in-one app"
+
