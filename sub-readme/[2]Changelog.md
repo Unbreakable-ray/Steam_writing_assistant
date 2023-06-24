@@ -16,6 +16,7 @@
   - Signature.
   - Auto-correct.
   - Auto-rewrite game names.
+  - Auto-lower cases F10
 
 ## v1.0.0 (First release):
 

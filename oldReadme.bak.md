@@ -91,7 +91,6 @@ For devs or Expert users
   - Signature.
   - Auto-correct.
   - Auto-rewrite game names.
-  - Auto-lower cases F10
 
 ## v1.0.0 (First release):
 
@@ -100,11 +99,6 @@ For devs or Expert users
 
 
 
-# Art History.
-
-## 1
-
-<img src="./sub-readme/readme-data/Untitled_Artwork.jpg" alt="Untitled_Artwork" style="zoom: 25%;" />
 
 
 
@@ -168,6 +162,6 @@ For devs or Expert users
 @xmaxray 									@unbreakable-ray
 
 
-Auto-merged at 06:36:14 PM 2023/06/24	@xMaxrayx	@Unbreakable-ray
+Auto-merged at 06:29:11 PM 2023/06/24	@xMaxrayx	@Unbreakable-ray
 
 All-in-one Readme Lite : https://github.com/Unbreakable-ray/All-in-one-Readme_Lite
